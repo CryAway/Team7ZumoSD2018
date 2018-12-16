@@ -117,7 +117,7 @@ void zmain(void)
                     Miss=true;
                     print_mqtt("Zumo047/miss", "%d", xTaskGetTickCount());
                 }
-                if (Miss == true && ((dig.l3 == 1) || (dig.r3 == 1)))
+                if (Miss == true && ((dig.l3 == 1) && (dig.r3 == 1)))
                 {
                     Miss=false;
                     print_mqtt("Zumo047/line", "%d", xTaskGetTickCount());
